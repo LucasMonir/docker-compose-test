@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 var cors = require('cors');
 
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:5000' 
+}))
 
 app.get('/', (req, res) => {
     res.send('hewwo world')

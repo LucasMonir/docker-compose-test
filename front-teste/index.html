@@ -29,14 +29,9 @@
 <script>
     $('#get').click((e) => {
         e.preventDefault(); 
-        $.ajax({
-            type: "GET",
-            headers: { "Access-Control-Allow-Headers": "*" },
-            url: "http://127.0.0.1:3000"
-        }).done(function (data) {
+        $.get('http://backend:3000').done(function (data) {
             $('#response').val(data);
         });
-        
     })
 
 </script>
