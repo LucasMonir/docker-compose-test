@@ -29,8 +29,8 @@
 <script>
     $('#get').click((e) => {
         e.preventDefault(); 
-        $.get('http://backend:3000').done(function (data) {
-            $('#response').val(data);
+        $.post('http://localhost:5000/getback').done((data) => {
+            $('#response').val(data)
         });
     })
 
